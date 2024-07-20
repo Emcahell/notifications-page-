@@ -7,6 +7,7 @@ let counter = 3;
 btnMarkRead.addEventListener('click', () =>{
     notification.forEach(div =>{
         div.classList.remove('new-notification');
+        div.querySelector('.icon').style.display = 'none';
         numberNotification.textContent = 0;
     })
 })
@@ -14,6 +15,7 @@ btnMarkRead.addEventListener('click', () =>{
 notification.forEach(div =>{
     div.addEventListener('click', () =>{
         div.classList.remove('new-notification');
+        div.querySelector('.icon').style.display = 'none';
         counter--;
         updateCounter();
     })
